@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+body {
+  background: #fffcfc;
+  font: 18px/1 "Roboto", sans-serif;
+}
+
+.app {
+  &__wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

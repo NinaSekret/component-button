@@ -1,0 +1,36 @@
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  appearance: none;
+  width: 100px;
+  height: 55px;
+  padding: 15px;
+  margin-bottom: 15px;
+  color: #fff;
+  border: none;
+  background: #3478e6;
+  font: 15px/1 "Roboto", sans-serif;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+
+  &_title {
+   margin: 0 5px;
+  }
+
+  &._small {
+    width: 150px;
+  }
+
+  &._medium {
+    width: 180px;
+  }
+
+  &._large {
+    width: 200px;
+  }
+  &:hover {
+    background: #7b92b7;
+  }
+}

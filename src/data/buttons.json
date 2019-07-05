@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "size": "small",
+    "svgLeft": true,
+    "svgRight": false
+  },
+  {
+    "id": 2,
+    "size": "medium",
+    "svgLeft": false,
+    "svgRight": true
+  },
+  {
+    "id": 3,
+    "size": "large",
+    "svgLeft": true,
+    "svgRight": true
+  }
+]
