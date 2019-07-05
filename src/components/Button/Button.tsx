@@ -51,7 +51,7 @@ export class Button extends React.PureComponent<Props, State> {
               </>
             )}
             <ReactCSSTransitionGroup
-              transitionName="add"
+              transitionName="animation"
               transitionEnterTimeout={300}
               transitionLeaveTimeout={200}
             >
