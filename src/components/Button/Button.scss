@@ -5,7 +5,6 @@
   appearance: none;
   width: 100px;
   height: 55px;
-  padding: 15px;
   margin-bottom: 15px;
   color: #fff;
   border: none;
@@ -16,7 +15,7 @@
   border-radius: 3px;
 
   &_title {
-   margin: 0 5px;
+    margin: 0 5px;
   }
 
   &._small {
@@ -33,4 +32,22 @@
   &:hover {
     background: #7b92b7;
   }
+}
+
+.animation-enter {
+  opacity: 0.01;
+}
+
+.animation-enter.animation-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.animation-leave {
+  opacity: 0.1;
+  transition: opacity 200ms ease-in;
+}
+
+.animation-leave.animation-leave-active {
+  opacity: 0;
 }

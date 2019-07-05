@@ -2,6 +2,7 @@ import * as React from "react";
 import { Loader } from "../Loader/Loader";
 import { ReactComponent as PlusSvg } from "../../assets/plus.svg";
 import "./Button.scss";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 interface Props {
   size: string;
@@ -38,19 +39,27 @@ export class Button extends React.PureComponent<Props, State> {
     ]
       .filter(x => x)
       .join(" ");
-
     return (
-      <button className={stylesButton} onClick={this.onBtnClickSave}>
-        {isLoading ? (
-          <Loader />
-        ) : (
+      <>
+        <button className={stylesButton} onClick={this.onBtnClickSave}>
           <>
-            {svgLeft && <PlusSvg />}
-            <p className="button_title">Cохранить</p>
-            {svgRight && <PlusSvg />}
+            {!isLoading && (
+              <>
+                {svgLeft && !isLoading && <PlusSvg />}
+                <p className="button_title">Cохранить</p>
+                {svgRight && <PlusSvg />}
+              </>
+            )}
+            <ReactCSSTransitionGroup
+              transitionName="add"
+              transitionEnterTimeout={300}
+              transitionLeaveTimeout={200}
+            >
+              {isLoading && <Loader />}
+            </ReactCSSTransitionGroup>
           </>
-        )}
-      </button>
+        </button>
+      </>
     );
   }
 }
