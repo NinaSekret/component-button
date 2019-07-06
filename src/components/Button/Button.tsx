@@ -15,7 +15,7 @@ interface State {
   showText: boolean;
 }
 
-export class Button extends React.Component<Props, State> {
+export class Button extends React.PureComponent<Props, State> {
   state = {
     isLoading: false,
     showText: true
